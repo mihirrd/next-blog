@@ -25,7 +25,7 @@ const page = () => {
               ></Image>
               </div>
               <p className='mb-10' >
-              I am also a Sitar Player and a student of Indian Classial Music. You can find my music on Youtube, spotify and on Instagram reels!
+              I am also a Sitar Player and a student of Indian Classical Music. You can find my music on Youtube, Spotify and on Instagram reels!
               </p>
               <div className="flex justify-center mb-10">
               <Image
