@@ -13,7 +13,7 @@ const page = () => {
             <div className="flex flex-col p-10 text-justify w-full lg:w-2/5 md:text-lg">
             <p className='mb-10'>
               Hey there, my name is Mihir Deshpande. 
-              I am a Software Engineer. I am currently working in Helpshift as a Backend Engineer. I am proficient in Java and Python. Now a days, I am mostly "functioning" in Clojure. I specialise in Product Development and Distributed Systems.
+              I am a Software Engineer. I am currently working in Helpshift as a Backend Engineer. I am proficient in Java and Python. Now a days, I am "functioning" in Clojure. I specialise in Product Development and Distributed Systems. I mostly write about stuff I am learning. 
               </p>
               <div className="flex justify-center mb-10">
               <Image
