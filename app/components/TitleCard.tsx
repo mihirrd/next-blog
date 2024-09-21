@@ -1,6 +1,4 @@
 import React from 'react'
-import kafka from "../../public/kafka.webp"
-import Image from 'next/image'
 import Link from 'next/link'
 
 const TitleCard = () => {

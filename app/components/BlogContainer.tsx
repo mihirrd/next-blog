@@ -1,7 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
 import TitleCard from './TitleCard'
-const titles = ["Essence of Apache Kafka", "Deepwalking in clojure"]
 
 
 const BlogContainer = () => {
