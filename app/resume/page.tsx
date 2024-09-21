@@ -11,30 +11,19 @@ const page = () => {
     <NavBar/>
     <div className="flex flex-col w-full items-center font-serif mb-8 text-sm lg:text-base">
         <div className='w-4/5 lg:w-3/5 mt-8'>
-        <div className='flex space-x-2'>
-            <div className='font-bold'>Programming Languages - </div>
+        <div className='text-lg font-bold mb-4'>Tech Stack</div>
+            <div className='font-bold'>Programming Languages </div>
             <div>Clojure, Java, C++, Python, JavaScript</div>
-        </div>
-        <div className='flex space-x-2'>
-            <div className='font-bold'>Database Technologies - </div>
+            <div className='font-bold'>Database Technologies </div>
             <div>MongoDB, PostgreSQL, Apache Kafka, Redis, Elasticsearch, YugabyteDB</div>
-        </div>
-        <div className='flex space-x-2'>
-            <div className='font-bold'>Monitoring and Logging - </div>
+            <div className='font-bold'>Monitoring and Logging </div>
             <div>Grafana, Kibana</div>
-        </div>
-        <div className='flex space-x-2'>
-            <div className='font-bold'>Libraries and Frameworks - </div>
+            <div className='font-bold'>Libraries and Frameworks </div>
             <div>Ring, Compojure, Jetty, Spring Boot, Node.js, Express.js, Next.js</div>
-        </div>
-        <div className='flex space-x-2'>
-            <div className='font-bold'>Tools and Platforms - </div>
+            <div className='font-bold'>Tools and Platforms </div>
             <div>Emacs, Tmux, Docker, Jenkins, Git, Gerrit</div>
-        </div>
-        <div className='flex space-x-2'>
-            <div className='font-bold'>Technical Proficiencies - </div>
+            <div className='font-bold'>Technical Proficiencies </div>
             <div>Functional Programming, Distributed Systems, DSA, Communication, Documentation</div>
-        </div>
         <Divider/>
         </div>
     <div className='w-4/5 lg:w-3/5 mt-8'>
