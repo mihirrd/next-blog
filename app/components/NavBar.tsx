@@ -4,7 +4,7 @@ import Divider from './Divider'
 
 const NavBar = () => {
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 p-4 font-mono">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -29,12 +29,12 @@ const NavBar = () => {
         <li><a className='text-lg'>Resume</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">Mihir Deshpande</a>
+    <a className="text-xl ml-4">Mihir Deshpande</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-    <li><a className='text-lg'>About</a></li>
-    <li><a href='/blog' className='text-lg'>Blog</a></li>
+    <li><a href='/about' className='text-lg'>About</a></li>
+    <li><a href='/' className='text-lg'>Blog</a></li>
     <li><a className='text-lg'>Resume</a></li>
     </ul>
   </div>
