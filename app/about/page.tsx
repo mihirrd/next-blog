@@ -8,7 +8,6 @@ import concertPic from '../../public/concert.png'
 const page = () => {
   return (
     <main>
-        <NavBar/>
         <section className="flex justify-center mb-1 font-serif">
             <div className="flex flex-col p-10 text-justify w-full lg:w-2/5 md:text-lg">
             <p className='mb-10'>
@@ -38,8 +37,6 @@ const page = () => {
               </div>
             </div>
         </section>
-        <Footer/>
-        
     </main>
     
   )

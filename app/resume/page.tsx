@@ -8,7 +8,6 @@ import Divider from '../components/Divider'
 const page = () => {
   return (
     <main>
-    <NavBar/>
     <div className="flex flex-col w-full items-center font-serif mb-8 text-sm lg:text-base">
         <div className='w-4/5 lg:w-3/5 mt-8'>
         <div className='text-lg font-bold mb-4'>Tech Stack</div>
@@ -26,7 +25,7 @@ const page = () => {
             <div>Functional Programming, Distributed Systems, DSA, Communication, Documentation</div>
         <Divider/>
         </div>
-    <div className='w-4/5 lg:w-3/5 mt-8'>
+    <div className='w-4/5 lg:w-3/5 mt-4'>
     <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
   <li>
     <div className="timeline-middle">
@@ -111,7 +110,7 @@ const page = () => {
     <div className="timeline-start mb-10 md:text-end">
       <time className="font-serif">2017 - 2021</time>
       <div className="text-lg font-black">Undergrad - Pune Institute of Computer Technology</div>
-      <ul className='text-wrap text-justify mb-10 lg:mb-0'>
+      <ul className='text-wrap text-justify'>
         <li>
         BE - Electronics and Telecommunication Engineering, CGPA - 9.15/10
         </li>
@@ -126,7 +125,6 @@ const page = () => {
 </ul>
 </div>
 </div>
-<Footer/>
 </main>
   )
 }
