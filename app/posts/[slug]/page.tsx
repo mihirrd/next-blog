@@ -3,6 +3,7 @@ import Markdown from "markdown-to-jsx"
 import fs from 'fs'
 import matter from "gray-matter"
 import path from 'path'
+import Divider from '@/app/components/Divider'
 
 function getPostContent(slug) {
     const folder = path.join(process.cwd(), "/posts/")
@@ -19,11 +20,21 @@ function getPostContent(slug) {
 
 const page = (props: any) => {
 const post = getPostContent(props.params.slug)
+const date = new Date(post.date)
+const dateTimeFormatter = new Intl.DateTimeFormat("en-US", {dateStyle: 'long'});
+const formatDate = dateTimeFormatter.format(date);
   return (
     <div>
-        <article className='prose'>
+        <div className="flex justify-center font-serif">
+        <div className="flex flex-col p-10 w-full lg:w-2/5">
+        <div className='text-sm font-serif mb-2'>{formatDate}</div>
+        <div className='lg:text-4xl text-2xl font-serif'>{post.title}</div>
+        <Divider/>
+        <article className='prose lg:prose-xl text-justify'>
         <Markdown>{post.content}</Markdown>
         </article>
+        </div>
+        </div>
     </div>
   )
 }
