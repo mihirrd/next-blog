@@ -13,7 +13,7 @@ const page = () => {
             <div className="flex flex-col text-justify w-4/5 md:w-2/5 md:text-lg">
             <p className='mb-10 mt-8'>
               Hey there, my name is Mihir Deshpande. 
-              I am Software Engineer. I am currently working in Helpshift as a Backend Engineer. Now as days, I am mostly functioning in Clojure (see what I did there?). I specialise in Product Development and Distributed Systems. You can find me writing here about literally anything that I find fascinating or hacking together side projects that are way too ambitious for their own good.
+              I am Software Engineer. I am currently working in Helpshift as a Backend Engineer. Now as days, I am mostly functioning in Clojure (see what I did there?). I specialise in Product Development and Distributed Systems. I mostly write here about literally anything that I find fascinating. 
               </p>
               <div className="flex justify-center mb-10">
               <Image
@@ -37,7 +37,7 @@ const page = () => {
               ></Image>
               </div>
               <p className='mb-10' >
-              Drop me a message and I would love to talk about tech, science, art, music and anything even remotely nerdy. 
+              Drop me a message and I would love to talk about Tech, Science, Art, Music and anything even remotely nerdy. 
               </p>
             </div>
         </section>

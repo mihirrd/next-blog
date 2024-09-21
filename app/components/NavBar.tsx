@@ -1,6 +1,6 @@
 import React from 'react'
 import ThemeController from './ThemeController'
-import Divider from './Divider'
+import Link from 'next/link'
 
 const NavBar = () => {
   return (
@@ -24,18 +24,18 @@ const NavBar = () => {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <li><a className='text-lg'>About</a></li>
-        <li><a className='text-lg'>Blog</a></li>
-        <li><a className='text-lg'>Resume</a></li>
+        <li><Link href='/about' className='text-lg'>About</Link></li>
+        <li><Link href='/' className='text-lg'>Blog</Link></li>
+        <li><Link href='/resume' className='text-lg'>Resume</Link></li>
       </ul>
     </div>
-    <a className="text-xl ml-4">Mihir Deshpande</a>
+    <Link href='/about' className="text-xl ml-4">Mihir Deshpande</Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-    <li><a href='/about' className='text-lg'>About</a></li>
-    <li><a href='/' className='text-lg'>Blog</a></li>
-    <li><a className='text-lg'>Resume</a></li>
+    <li><Link href='/about' className='text-lg'>About</Link></li>
+    <li><Link href='/' className='text-lg'>Blog</Link></li>
+    <li><Link href='/resume' className='text-lg'>Resume</Link></li>
     </ul>
   </div>
   <div className="navbar-end">
