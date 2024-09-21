@@ -8,8 +8,8 @@ const page = () => {
   return (
     <main>
     <NavBar/>
-    <div className="flex justify-center font-serif mb-8 text-sm md:text-base">
-    <div className='w-4/5 md:w-3/5 mt-8'>
+    <div className="flex justify-center font-serif mb-8 text-sm lg:text-base">
+    <div className='w-4/5 lg:w-3/5 mt-8'>
     <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
   <li>
     <div className="timeline-middle">
@@ -27,7 +27,7 @@ const page = () => {
     <div className="timeline-start mb-10 md:text-end">
       <time className="font-mono italic">2023 - Present</time>
       <div className="text-lg font-black">Software Engineer - Helpshift</div>
-      <ul className='text-wrap text-justify mb-4 md:mb-0'>
+      <ul className='text-wrap text-justify mb-4 lg:mb-0'>
         <li>
         Designed, developed, and maintained Backend Services using Clojure for a high-traffic, Consumer first, SaaS Platform handling millions of requests per day
         </li>
