@@ -24,7 +24,7 @@ We can apply the same logic to graphs as well, where the nodes that are in proxi
 
 Word2Vec when applied on graphs, is called DeepWalk, developed by Bryan Perozzi, Rami Al-Rfou, and Steven Skiena.
 DeepWalk, like word2vec, is an unsupervised learning approach that captures the neighborhood similarity of nodes in a graph. Let's create a simple implementation of this technique in Clojure.
-###Graph representation
+### Graph representation
 We will use a representation similar to an adjacency list.
 
 ```clojure
@@ -43,7 +43,7 @@ We will use a representation similar to an adjacency list.
 ```
 
 It is a map containing the nodes as keys and corresponding values being the set of connected nodes.
-###Initializing embeddings
+### Initializing embeddings
 We will initialize the embeddings with random values and by a stochastic, unsupervised process, we will gradually make our way towards more accurate values.
 
 ```clojure
@@ -57,7 +57,7 @@ We will initialize the embeddings with random values and by a stochastic, unsupe
        vec))
 ```
 
-###Random walk
+### Random walk
 It's like taking a stroll through the city, where buildings represent the nodes and edges represent the roads. We decide how many buildings we want in the walk and start walking from a fixed building. At the end of each walk, we attempt to make sense of which buildings were close to each other.
 
 ![images/pico-8-movement](/images/dw_sample_graph.png)
@@ -92,7 +92,7 @@ For the undirected graph above, let's say the starting node is "a" and the walk 
 
 For each walk, we will train the model on the words appearing in the random walk. The objective is to maximize the dot product between the vector representations of nodes that appear nearby within these walks. This approach leverages the fact that the dot product is proportional to the cosine similarity between vectors. By increasing the dot product of vectors representing nearby nodes, we encode the graph's local structure into the embedding space. Nodes that frequently co-occur in random walks will develop similar vector representations, effectively capturing the graph's topology in a continuous vector space.
 
-###Training process
+### Training process
 For this example, we are considering only positive samples, hence the error is calculated as - (- 1 (sigmoid dot_product))
 The gradients are calculated using this error and the current vectors. Both the word vector and the context vector are updated in the direction that reduces the error.
 
@@ -128,7 +128,7 @@ The gradients are calculated using this error and the current vectors. Both the 
 ```
 
 This function is typically called many times during training, gradually refining the word vectors to capture semantic relationships between words based on their co-occurrence patterns in the text.
-###Results
+### Results
 
 ```clojure
 (defn deepwalk

@@ -28,7 +28,7 @@ const NavBar = () => {
         <li><Link href='/resume' className='text-lg'>Resume</Link></li>
       </ul>
     </div>
-    <Link href='/about' className="border-2 text-xl">Mihir Deshpande</Link>
+    <Link href='/about' className="text-xl">Mihir Deshpande</Link>
   </div>
   <div className="navbar-center hidden md:flex">
     <ul className="menu gap-4 menu-horizontal px-1">
