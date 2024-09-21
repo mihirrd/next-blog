@@ -11,12 +11,11 @@ const page = () => {
         <NavBar/>
         <section className="flex justify-center mb-1 font-serif">
             <div className="flex flex-col text-justify w-4/5 md:w-2/5 md:text-lg">
-            <p className='mb-12 mt-8'>
+            <p className='mb-10 mt-8'>
               Hey there, my name is Mihir Deshpande. 
-              I am Software Engineer. I am currently working in Helpshift as a Backend Engineer. 
-              I specialise in prodcut development and Distributed Systems.    
+              I am Software Engineer. I am currently working in Helpshift as a Backend Engineer. Now as days, I am mostly functioning in Clojure (see what I did there?). I specialise in Product Development and Distributed Systems. You can find me writing here about literally anything that I find fascinating or hacking together side projects that are way too ambitious for their own good.
               </p>
-              <div className="flex justify-center mb-12">
+              <div className="flex justify-center mb-10">
               <Image
               className="rounded-badge"
               src={profilePic} 
@@ -25,18 +24,21 @@ const page = () => {
               width={400}
               ></Image>
               </div>
-              <p className='text-center mb-12' >
-              I am also a sitar player and a student of Indian Classial Music. You can find my music on Youtube and spotify. 
+              <p className='mb-10' >
+              I am also a Sitar Player and a student of Indian Classial Music. You can find my music on Youtube and spotify and some reels on Instagram as well!
               </p>
-              <div className="flex justify-center mb-12">
+              <div className="flex justify-center mb-10">
               <Image
-               className="object-cover rounded-lg"
+               className="object-cover rounded-xl"
               src={concertPic} 
               alt=''
               height={600}
               width={600}
               ></Image>
               </div>
+              <p className='mb-10' >
+              Drop me a message and I would love to talk about tech, science, art, music and anything even remotely nerdy. 
+              </p>
             </div>
         </section>
         <Footer/>
