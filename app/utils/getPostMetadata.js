@@ -3,7 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 
 export default function getPostMetadata(folderName) {
-    const folder =  path.join(process.cwd(), "app", folderName)
+    const folder =  path.join(process.cwd(), folderName)
     const files = fs.readdirSync(folder)
     const markdownPosts = files.filter(file => file.endsWith('.md'))
 

@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 
 
-const TitleCard = ({ date, title }) => {
+const TitleCard = ({ date, title, slug}) => {
     const publishDate = new Date(date)
     const dateTimeFormatter = new Intl.DateTimeFormat("en-US", {dateStyle: 'long'});
     const formatDate = dateTimeFormatter.format(publishDate);
@@ -11,7 +11,7 @@ const TitleCard = ({ date, title }) => {
         <div className="card w-full mt-4 bg-base-100 shadow-xl">
             <figure>
             </figure>
-            <Link href="/">
+            <Link href={`../posts/${slug}`}>
                 <div className="card-body">
                     <p className='font-thin text-sm'>{formatDate}</p>
                     <h2 className="card-title">{title}</h2>

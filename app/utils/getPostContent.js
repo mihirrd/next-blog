@@ -3,7 +3,7 @@ import matter from "gray-matter"
 import path from 'path'
 
 export default function getPostContent(slug) {
-    const folder = path.join(process.cwd(), "app/posts/")
+    const folder = path.join(process.cwd(), "posts")
     const file = folder + `${slug}.md`
     const content = fs.readFileSync(file, 'utf8')
 

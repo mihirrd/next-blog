@@ -2,8 +2,8 @@ import React from 'react'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import Image from 'next/image'
-import profilePic from '../../public/headshot.png'
-import concertPic from '../../public/concert.png'
+import profilePic from '../../public/images/headshot.png'
+import concertPic from '../../public/images/concert.png'
 
 const page = () => {
   return (
