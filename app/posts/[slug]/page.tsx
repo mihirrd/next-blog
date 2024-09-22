@@ -4,6 +4,7 @@ import fs from 'fs'
 import matter from "gray-matter"
 import path from 'path'
 import Divider from '@/app/components/Divider'
+import getPostMetadata from '@/app/utils/getPostMetadata'
 
 function getPostContent(slug) {
     const folder = path.join(process.cwd(), "/posts/")
@@ -18,11 +19,20 @@ function getPostContent(slug) {
     }
 }
 
+
+export const generateStaticParams = async () => {
+    const posts = getPostMetadata("posts/")
+    return posts.map((post)=>
+    ({slug: post.slug})
+    )
+  };
+
+
 const page = (props: any) => {
-const post = getPostContent(props.params.slug)
-const date = new Date(post.date)
-const dateTimeFormatter = new Intl.DateTimeFormat("en-US", {dateStyle: 'long'});
-const formatDate = dateTimeFormatter.format(date);
+    const post = getPostContent(props.params.slug)
+    const date = new Date(post.date)
+    const dateTimeFormatter = new Intl.DateTimeFormat("en-US", {dateStyle: 'long'});
+    const formatDate = dateTimeFormatter.format(date);
   return (
     <div>
         <div className="flex justify-center font-serif">
