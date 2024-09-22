@@ -1,6 +1,5 @@
 ---
 title: 'The Essence of Apache Kafka'
-slug: 'essence_apache_kafka'
 date: '2023-12-14'
 ---
 
