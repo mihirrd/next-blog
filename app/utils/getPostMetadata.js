@@ -3,7 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 
 export default function getPostMetadata(folderName) {
-    const folder =  path.join(process.cwd(), folderName)
+    const folder = path.join(process.cwd(), folderName)
     const files = fs.readdirSync(folder)
     const markdownPosts = files.filter(file => file.endsWith('.md'))
 
@@ -18,11 +18,11 @@ export default function getPostMetadata(folderName) {
         }
     })
 
-    return posts.sort((a, b)=>{
+    return posts.sort((a, b) => {
         if (a.date < b.date) {
             return 1;
-          } else {
+        } else {
             return -1;
-          }
+        }
     });
 }

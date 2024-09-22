@@ -18,11 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="retro">
-      
       <body className={inter.className}>
-      <NavBar/>
+        <NavBar />
         {children}
-      <Footer/>  
+        <Footer />
       </body>
     </html>
   )
