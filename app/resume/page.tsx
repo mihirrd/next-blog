@@ -39,7 +39,7 @@ const page = () => {
                             <div className="timeline-start mb-10 md:text-end">
                                 <time className="font-serif">2023 - Present</time>
                                 <div className="text-lg font-black">Software Engineer - Helpshift</div>
-                                <ul className='text-wrap text-justify mb-4 lg:mb-0'>
+                                <ul className='list-disc ml-4 text-wrap text-justify mb-4 lg:mb-0'>
                                     <li>
                                         Designed, developed, and maintained Backend Services using Clojure for a high-traffic, Consumer first, SaaS Platform handling millions of requests per day
                                     </li>
@@ -76,10 +76,10 @@ const page = () => {
                                         clipRule="evenodd" />
                                 </svg>
                             </div>
-                            <div className="timeline-end mb-10">
+                            <div className="timeline-end mb-10 ml-4">
                                 <time className="font-serif">2021 - 2023</time>
                                 <div className="text-lg font-black">Software Engineer - miniOrange</div>
-                                <ul className='text-wrap text-justify'>
+                                <ul className='list-disc text-wrap text-justify'>
                                     <li>
                                         Worked on developing cloud and on-premise-based Identity and Access management plugin solutions focusing on Single Sign-on, API security, and Multifactor authentication with Protocols namely as SAML and OAuth/OIDC using Spring Boot and Hybernate ORM For Atlassian Platforms
                                     </li>
@@ -106,7 +106,7 @@ const page = () => {
                             <div className="timeline-start mb-10 md:text-end">
                                 <time className="font-serif">2017 - 2021</time>
                                 <div className="text-lg font-black">Undergrad - Pune Institute of Computer Technology</div>
-                                <ul className='text-wrap text-justify'>
+                                <ul className='list-disc ml-4 text-wrap text-justify'>
                                     <li>
                                         BE - Electronics and Telecommunication Engineering, CGPA - 9.15/10
                                     </li>
