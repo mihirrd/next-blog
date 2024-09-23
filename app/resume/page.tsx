@@ -41,22 +41,19 @@ const page = () => {
                                 <div className="text-lg font-black">Software Engineer - Helpshift</div>
                                 <ul className='list-disc ml-4 text-wrap text-justify mb-4 lg:mb-0'>
                                     <li>
-                                        Designed, developed, and maintained Backend Services using Clojure for a high-traffic, Consumer first, SaaS Platform handling millions of requests per day
+                                        Designed and developed Backend Services using Clojure for a high-traffic, AI first, SaaS Platform handling millions of requests per day.
                                     </li>
                                     <li>
-                                        Implemented a robust and scalable architecture for a third party LLM Integration into a Chatbot service by leveraging Apache Kafka and Redis, to ensure high performance, Fault Tolerance and reliability
+                                        Implemented a robust and scalable architecture for a third party LLM Integration into a Chatbot service by leveraging Apache Kafka and Redis, to ensure high performance, Fault Tolerance and reliability.
                                     </li>
                                     <li>
-                                        Refactored existing microservices and improved maintainability, scalability and reduced the system latency by 50% by using Clojure workers, optimizing Queries and employing Caching techniques
+                                        Collaborated with product managers to understand user requirements and translated them into Dev Specs, developing new features that align with business goals.
                                     </li>
                                     <li>
-                                        Collaborated with product managers to understand user requirements and translated them into Dev Specs, developing new features that align with business goals
+                                        Participated in on-call rotations and responded to incidents promptly, diagnosing and resolving issues to minimize downtime.
                                     </li>
                                     <li>
-                                        Participated in on-call rotations and responded to incidents promptly, diagnosing and resolving issues to minimize downtime
-                                    </li>
-                                    <li>
-                                        Mentored new engineers, guiding best practices, code reviews, and troubleshooting techniques to facilitate their professional growth and development
+                                        Mentored new engineers, guiding best practices, code reviews, and debugging techniques.
                                     </li>
                                 </ul>
                             </div>
