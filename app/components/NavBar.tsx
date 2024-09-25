@@ -1,12 +1,48 @@
-import React from 'react'
+'use client';
+import { useEffect, useRef, useState } from "react";
 import Link from 'next/link'
 
 const NavBar = () => {
+    const divRef = useRef(null);
+    const [hideMenu, setHideMenu] = useState(true);
+
+    const isListenerAttached = useRef(false);
+
+    const toggleHideMenu = () => {
+        console.log("hello")
+        setHideMenu((prev) => !prev);
+    };
+
+    const handleClickOutside = (event) => {
+    // Check if click happened outside the div
+    if (divRef.current && !divRef.current.contains(event.target)) {
+      setHideMenu(true);
+
+      // Remove event listener as required operation is performed
+      document.removeEventListener("mousedown", handleClickOutside);
+      isListenerAttached.current = false;
+    }
+  };
+
+  useEffect(() => {
+    if (!hideMenu && !isListenerAttached.current) {
+      // Add event listener to check outside click
+      document.addEventListener("mousedown", handleClickOutside);
+      isListenerAttached.current = true;
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [hideMenu]);
+
+
     return (
         <div className="navbar bg-base-100 p-4 font-mono border-b-2 border-b-stone-500">
             <div className="navbar-start">
-                <div className="dropdown">
-                    <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
+                <div className="dropdown" ref={divRef}>
+                    <div 
+                    tabIndex={0} 
+                    role="button" 
+                    className="btn btn-ghost md:hidden"
+                    onClick={toggleHideMenu}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-5 w-5"
@@ -20,15 +56,15 @@ const NavBar = () => {
                                 d="M4 6h16M4 12h8m-8 6h16" />
                         </svg>
                     </div>
-                    <ul
-                        tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        <li><Link href='/about' className='text-lg'>About</Link></li>
-                        <li><Link href='/' className='text-lg'>Blog</Link></li>
-                        <li><Link href='/resume' className='text-lg'>Resume</Link></li>
+                    <ul tabIndex={0}
+                        className={`menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow ${hideMenu ? "hidden" : ""}`}
+                        >
+                        <li onClick={toggleHideMenu}><Link href='/about' className='text-lg'>About</Link></li>
+                        <li onClick={toggleHideMenu}><Link href='/' className='text-lg'>Blog</Link></li>
+                        <li onClick={toggleHideMenu}><Link href='/resume' className='text-lg'>Resume</Link></li>
                     </ul>
                 </div>
-                <Link href='/about' className="text-xl">Mihir Deshpande</Link>
+                <div className="text-xl"><Link href='/about'>Mihir Deshpande</Link></div>
             </div>
             <div className="navbar-center hidden md:flex">
                 <ul className="menu gap-4 menu-horizontal px-1">

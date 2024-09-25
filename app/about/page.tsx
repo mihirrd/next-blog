@@ -10,7 +10,7 @@ const page = () => {
         <div className="flex flex-col p-10 w-full lg:w-2/5 md:text-lg">
           <p className='mb-10'>
             Hey there, my name is Mihir Deshpande.
-            I am a Programmer and a Software Engineer. I am currently working in Helpshift as a Backend Dev. I am proficient in Java and Python. Nowadays, I am "functioning" in Clojure. I specialise in Product Development and Distributed Systems. This is the place where I dump(?) all my experiences and learnings in the text format. 
+            I am a Programmer and a Software Engineer. I am currently working at Helpshift as a Backend Dev. I specialise in Product Development and Distributed Systems. I like exploring tech, building projects, basically <p className='italic'>hacking </p> as <a href='https://www.paulgraham.com/hp.html'>Paul Graham </a> puts it. This is the place where I dump(?) all my experiences and learnings in the text format.
           </p>
           <div className="flex justify-center mb-10">
             <Image
@@ -22,7 +22,7 @@ const page = () => {
             ></Image>
           </div>
           <p className='mb-10' >
-            I am also a Sitar Player and a student of Indian Classical Music. You can find my music on Youtube, Spotify and on Instagram reels!
+            On a sidenote, I am also a Sitar Player and a student of Indian Classical Music. You can find my music on Youtube, Spotify and on Instagram reels!
           </p>
           <div className="flex justify-center mb-10">
             <Image
