@@ -118,7 +118,7 @@ const page = () => {
                     </ul>
                 </div>
                 <div className='mt-4'>
-                <a href='https://www.dropbox.com/scl/fi/qwo38kecf3qtbin2687b7/resume_mihir_blog.pdf?rlkey=ulj9cjqb1wcrnfpt5jk6czkfi&st=ah9fa08y&dl=1'>
+                <a href='https://www.dropbox.com/scl/fi/qwo38kecf3qtbin2687b7/resume_mihir_blog.pdf?rlkey=ulj9cjqb1wcrnfpt5jk6czkfi&st=ah9fa08y&dl=0'>
                 <p className='underline'>Download Resume</p></a></div>
             </div>
         </main>
