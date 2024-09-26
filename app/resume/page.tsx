@@ -1,5 +1,6 @@
 import React from 'react'
 import Divider from '../components/Divider'
+import Link from 'next/link'
 
 const page = () => {
     return (
@@ -118,8 +119,10 @@ const page = () => {
                     </ul>
                 </div>
                 <div className='mt-4'>
-                <a href='https://www.dropbox.com/scl/fi/qwo38kecf3qtbin2687b7/resume_mihir_blog.pdf?rlkey=ulj9cjqb1wcrnfpt5jk6czkfi&st=ah9fa08y&dl=0'>
-                <p className='underline'>Download Resume</p></a></div>
+                <Link href='Resume_Mihir_Deshpande.pdf' 
+                target='_blank'
+                rel="noopener noreferrer">
+                <p className='underline'>View/Download Resume</p></Link></div>
             </div>
         </main>
     )
