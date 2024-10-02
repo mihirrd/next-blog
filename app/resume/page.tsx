@@ -42,13 +42,13 @@ const page = () => {
                                 <div className="text-lg font-black">Software Engineer - Helpshift</div>
                                 <ul className='list-disc ml-4 text-wrap text-justify mb-4 lg:mb-0'>
                                     <li>
-                                        Designed and developed Backend Services using Clojure for a high-traffic, AI first, SaaS Platform handling millions of requests per day.
+                                        Designed and developed backend services using Clojure for a high-traffic, AI-first SaaS platform that handles 90K requests per second.
                                     </li>
                                     <li>
-                                        Implemented a robust and scalable architecture for a third party LLM Integration into a Chatbot service by leveraging Apache Kafka and Redis, to ensure high performance, Fault Tolerance and reliability.
+                                        Implemented a robust and scalable architecture for a third-party LLM Integration into a Chatbot service by leveraging Apache Kafka and Redis, to ensure high performance, Fault Tolerance, and reliability.
                                     </li>
                                     <li>
-                                        Collaborated with product managers to understand user requirements and translated them into Dev Specs, developing new features that align with business goals.
+                                        Collaborated with product managers to understand user requirements and translated them into Dev Specs, developing new features that aligned with business goals.
                                     </li>
                                     <li>
                                         Participated in on-call rotations and responded to incidents promptly, diagnosing and resolving issues to minimize downtime.
@@ -79,10 +79,10 @@ const page = () => {
                                 <div className="text-lg font-black">Software Engineer - miniOrange</div>
                                 <ul className='list-disc text-wrap text-justify'>
                                     <li>
-                                        Worked on developing cloud and on-premise-based Identity and Access management plugin solutions focusing on Single Sign-on, API security, and Multifactor authentication with Protocols namely as SAML and OAuth/OIDC using Spring Boot and Hybernate ORM For Atlassian Platforms
+                                    Worked on developing cloud and on-premise-based Identity and Access management plugin solutions focusing on Single Sign-on, API security, and Multifactor authentication with Protocols namely SAML and OAuth/OIDC using Spring Boot and Hibernate ORM For Atlassian Platforms
                                     </li>
                                     <li>
-                                        Led a team of 4 engineers focusing on API authentication module, planned sprints, conducted stand-ups, and ensured timely releases.
+                                    Led a team of 4 engineers focusing on the API authentication module, planned sprints, conducted stand-ups, and ensured timely releases.
                                     </li>
                                 </ul>
                             </div>
@@ -119,10 +119,10 @@ const page = () => {
                     </ul>
                 </div>
                 <div className='mt-4'>
-                <Link href='Resume_Mihir_Deshpande.pdf' 
-                target='_blank'
-                rel="noopener noreferrer">
-                <p className='underline'>View/Download Resume</p></Link></div>
+                    <Link href='Resume_Mihir_Deshpande.pdf'
+                        target='_blank'
+                        rel="noopener noreferrer">
+                        <p className='underline'>View/Download Resume</p></Link></div>
             </div>
         </main>
     )

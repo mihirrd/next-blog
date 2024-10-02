@@ -9,8 +9,7 @@ const page = () => {
       <section className="flex justify-center mb-1 font-serif">
         <div className="flex flex-col p-10 w-full lg:w-2/5 md:text-lg">
           <p className='mb-10'>
-            Hey there, my name is Mihir Deshpande.
-            I am a Programmer and a Software Engineer. I am currently working at Helpshift as a Backend Engineer. I specialise in Product Development and Distributed Systems. I like exploring tech, trying out new building projects, <a href='https://www.paulgraham.com/hp.html' target="blank" className='italic underline'>hacking</a> as Paul Graham puts it. This is the place where I dump(?) all my experiences and learnings in the text format.
+          Hey there, my name is Mihir Deshpande. I am a Programmer and a Software Engineer. I am currently working at Helpshift as a Backend Engineer. I specialize in Product Development and Distributed Systems. I like exploring tech, and trying out new building projects - <a href='https://www.paulgraham.com/hp.html' target="blank" className='italic underline'>hacking</a> as Paul Graham puts it. This is the place where I dump(?) all my experiences and learnings in the text format.
           </p>
           <div className="flex justify-center mb-10">
             <Image
