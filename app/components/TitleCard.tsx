@@ -12,7 +12,7 @@ const TitleCard = ({ date, title, slug }) => {
             <Link href={`../posts/${slug}`}>
                 <div className="card-body">
                     <p className='font-thin text-sm'>{formatDate}</p>
-                    <h2 className="card-title">{title}</h2>
+                    <h2 className="md:text-2xl text-xl">{title}</h2>
                 </div>
             </Link>
         </div>

@@ -35,7 +35,8 @@ const NavBar = () => {
 
 
     return (
-        <div className="navbar bg-base-100 p-4 font-mono border-b-2 border-b-stone-500">
+        <div className="flex justify-center">
+        <div className="navbar bg-base-100 p-4 font-mono border-b-2 border-b-stone-500 lg:w-2/5">
             <div className="navbar-start">
                 <div className="dropdown" ref={divRef}>
                     <div 
@@ -60,22 +61,21 @@ const NavBar = () => {
                         className={`menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow ${hideMenu ? "hidden" : ""}`}
                         >
                         <li onClick={toggleHideMenu}><Link href='/about' className='text-lg'>About</Link></li>
-                        <li onClick={toggleHideMenu}><Link href='/' className='text-lg'>Blog</Link></li>
-                        <li onClick={toggleHideMenu}><Link href='/resume' className='text-lg'>Resume</Link></li>
+                        <li onClick={toggleHideMenu}><Link href='/' className='text-lg'>Posts</Link></li>
+                    
                     </ul>
                 </div>
-                <div className="text-xl"><Link href='/about'>Mihir Deshpande</Link></div>
+                <div className="text-xl">Mihir Deshpande</div>
             </div>
-            <div className="navbar-center hidden md:flex">
-                <ul className="menu gap-4 menu-horizontal px-1">
-                    <li><Link href='/about' className='text-lg'>About</Link></li>
-                    <li><Link href='/' className='text-lg'>Blog</Link></li>
-                    <li><Link href='/resume' className='text-lg'>Resume</Link></li>
+            <div className="navbar-end hidden md:flex">
+                <ul className="menu menu-horizontal">
+                    <li><Link href='/about' className='text-lg'>
+                    About</Link></li>
+                    <li><Link href='/' className='text-lg'>Posts</Link></li>
+                    
                 </ul>
             </div>
-            <div className='navbar-end'>
-
-            </div>
+        </div>
         </div>
     )
 }
