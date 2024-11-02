@@ -14,7 +14,8 @@ export default function getPostMetadata(folderName) {
         return {
             title: matterResult.data.title,
             date: matterResult.data.date,
-            slug: filename.replace('.md', '')
+            slug: filename.replace('.md', ''),
+            peek: matterResult.data.peek
         }
     })
 

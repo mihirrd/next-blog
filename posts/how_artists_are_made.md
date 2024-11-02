@@ -1,6 +1,7 @@
 ---
 title: 'How Artists are Made'
 date: '2024-02-08'
+peek: 'It has been around six years since I started learning to play the sitar. It’s...'
 ---
 
 It has been around six years since I started learning to play the sitar. It’s not too long considering people spend 20–30 years in the process. But now when I look back, I see that the part where I was learning “how to play the sitar” was just the initial 2 to 3 years. After that, it has been more about learning how to create quality music.
