@@ -1,5 +1,6 @@
 ---
 title: 'Deepwalking in Clojure'
+subtitle: ''
 date: '2024-09-10'
 peek: 'If you were to guess the missing part of the sentence — “My name __ John Doe” what would you guess?...'
 ---

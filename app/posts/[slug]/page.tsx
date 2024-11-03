@@ -14,6 +14,7 @@ function getPostContent(slug) {
     const matterResult = matter(content)
     return {
         title: matterResult.data.title,
+        subtitle: matterResult.data.subtitle,
         date: matterResult.data.date,
         slug: slug,
         content: matterResult.content
@@ -48,6 +49,7 @@ const page = (props: any) => {
                         {formatDate}
                         </div>
                     <div className='lg:text-4xl text-2xl font-serif'>{post.title}</div>
+                    <div className='lg:text-2xl text-xl font-serif text-stone-600 text-opacity-80 font-thin'>{post.subtitle}</div>
                     <Divider />
                     <article className='prose prose-h4:font-thin prose-h3:font-thin prose-code:font-thin prose-code:text-sm md:prose-xl text-justify'>
                         <Markdown>{post.content}</Markdown>

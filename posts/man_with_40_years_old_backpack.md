@@ -1,5 +1,6 @@
 ---
 title: 'A Man with a 40 years old Backpack'
+subtitle: ''
 date: '2024-06-29'
 peek: 'On a Wednesday evening, as I stood in the parking lot after our weekly office football...'
 ---

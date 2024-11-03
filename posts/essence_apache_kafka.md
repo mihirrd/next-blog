@@ -1,5 +1,6 @@
 ---
 title: 'The Essence of Apache Kafka'
+subtitle: 'Conceptually Building a Distributed Event Driven Architecture'
 date: '2023-12-14'
 peek: 'Imagine that you go to your usual coffee place and encounter a gigantic queue...'
 ---

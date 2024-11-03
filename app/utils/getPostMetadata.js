@@ -13,6 +13,7 @@ export default function getPostMetadata(folderName) {
         const matterResult = matter(fileContents)
         return {
             title: matterResult.data.title,
+            subtitle: matterResult.data.subtitle,
             date: matterResult.data.date,
             slug: filename.replace('.md', ''),
             peek: matterResult.data.peek
