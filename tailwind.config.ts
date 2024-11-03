@@ -17,6 +17,7 @@ const config: Config = {
   },
   plugins: [
     require("daisyui"),
+    require('@tailwindcss/typography'), 
     require('@tailwindcss/typography')],
   daisyui: {
     themes: ["dim", "cupcake", "retro"],

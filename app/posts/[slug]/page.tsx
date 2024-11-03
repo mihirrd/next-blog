@@ -49,7 +49,7 @@ const page = (props: any) => {
                         </div>
                     <div className='lg:text-4xl text-2xl font-serif'>{post.title}</div>
                     <Divider />
-                    <article className='prose md:prose-xl text-justify'>
+                    <article className='prose prose-h4:font-thin prose-h3:font-thin prose-code:font-thin prose-code:text-sm md:prose-xl text-justify'>
                         <Markdown>{post.content}</Markdown>
                     </article>
                 </div>
