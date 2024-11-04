@@ -6,6 +6,7 @@ import path from 'path'
 import Divider from '@/app/components/Divider'
 import getPostMetadata from '@/app/utils/getPostMetadata'
 import Link from 'next/link'
+import { Metadata } from 'next'
 
 function getPostContent(slug) {
     const folder = path.join(process.cwd(), "/posts/")
@@ -17,9 +18,27 @@ function getPostContent(slug) {
         subtitle: matterResult.data.subtitle,
         date: matterResult.data.date,
         slug: slug,
-        content: matterResult.content
+        content: matterResult.content,
+        peek : matterResult.data.peek
     }
 }
+
+// This function generates dynamic metadata for each post
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+    // You can fetch your post data here
+    const post = await getPostContent(params.slug) // Replace with your data fetching function
+    
+    return {
+      title: `${post.title}`,
+      description: post.peek,
+      openGraph: {
+        title: post.title,
+        description: post.peek,
+        type: 'article',
+        authors: ['Mihir Deshpande']
+      }
+    }
+  }
 
 
 export const generateStaticParams = async () => {

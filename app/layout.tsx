@@ -7,7 +7,10 @@ import Footer from './components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Mihir Deshpande',
+  title: {
+    default: 'Mihir Deshpande',
+    template: '%s | Mihir Deshpande'
+  },
   description: "Welcome to Mihir's blog",
 }
 
