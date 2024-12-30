@@ -2,7 +2,7 @@
 title: 'Deepwalking in Clojure'
 subtitle: ''
 date: '2024-09-10'
-peek: 'If you were to guess the missing part of the sentence — “My name __ John Doe” what would you guess?...'
+peek: 'If you were to guess the missing part of the sentence — “My name __ John Doe” what would you guess? Most people would answer this with an “is.” You essentially guess a word that has the highest probability of being there. Interestingly enough, machines also work the same way...'
 ---
 If you were to guess the missing part of the sentence — “My name __ John Doe” what would you guess? Most people would answer this with an “is.” (A few interesting breeds would go for a “was” as well) You essentially guess a word that has the highest probability of being there. Interestingly enough, machines also work the same way. However, they don’t understand these words in their textual form. These words need to be converted into numbers for a machine to understand. How do we do it? The answer is Word embeddings.
 

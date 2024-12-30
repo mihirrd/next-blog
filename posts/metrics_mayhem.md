@@ -2,7 +2,7 @@
 title: 'Metrics Mayhem'
 subtitle: The Hidden Cost of Granularity in Graphite
 date: '2024-12-31'
-peek: 'This is an incident that caused the disk I/O to surge by 200%, database latency to increase from a few milliseconds to ~30 seconds, and a perfectly running Grafana dashboard to turn into a digital sloth on sedatives...'
+peek: 'This is an incident that caused the disk I/O to surge by 200%, database latency to increase from a few milliseconds to ~30 seconds, and a perfectly running Grafana dashboard to turn into a digital sloth...'
 ---
 
 This article serves as a post-it note for my future self. A reminder that a half-baked understanding of a system can bake a full-fledged disaster. This is an incident that caused the disk I/O to surge by 200%, database latency to increase from a few milliseconds to ~30 seconds, and a perfectly running Grafana dashboard to turn into a digital sloth.

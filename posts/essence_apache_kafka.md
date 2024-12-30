@@ -2,7 +2,7 @@
 title: 'The Essence of Apache Kafka'
 subtitle: 'Conceptually Building a Distributed Event Driven Architecture'
 date: '2023-12-14'
-peek: 'Imagine that you go to your usual coffee place and encounter a gigantic queue...'
+peek: 'Imagine that you go to your usual coffee place and encounter a gigantic queue. Going a little further, you realize that each individual has to wait in line until the coffee is prepared and handed over to them, as opposed to just placing the order at the counter and moving on...'
 ---
 
 Imagine that you go to your usual coffee place and encounter a gigantic queue. Going a little further, you realize that each individual has to wait in line until the coffee is prepared and handed over to them, as opposed to just placing the order at the counter and moving on. The latter approach seems pretty obvious since we know that order placement and the subsequent preparation process can be done as distinct, independent activities. The orders can be listed on a board and the barista can prepare them one after another. This idea is called asynchronous communication, where entities do not necessarily wait for each other to complete a task before initiating another.

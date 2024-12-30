@@ -2,7 +2,7 @@
 title: 'How Websockets are Scaled'
 subtitle: 'The Duality of Load Balancers'
 date: '2024-11-03'
-peek: 'Websockets are technically an HTTP upgrade — When a client initiates a Websocket connection...'
+peek: 'When a client initiates a Websocket connection, it sends an HTTP request with the `Upgrade` header set to `websocket`, signaling its intent to establish the connection. Once the TCP connection is established, each request must be routed to the correct server, which can add latency and processing overhead if examined at Layer 7...'
 ---
 ![images/websocket](/images/duality_of_lb_cover.png)
 
