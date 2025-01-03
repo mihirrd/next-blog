@@ -1,5 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import { Analytics } from "@vercel/analytics/react"
 import { Inter } from 'next/font/google'
 import NavBar from './components/NavBar'
 import Footer from './components/Footer'
@@ -22,8 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="retro">
       <body className={inter.className}>
-        <NavBar />
+        <NavBar />        
         {children}
+        <Analytics />
         <div className='mb-32'></div>
         <Footer />
       </body>
