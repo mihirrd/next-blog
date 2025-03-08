@@ -68,7 +68,7 @@ const page = (props: any) => {
                         {formatDate}
                         </div>
                     <div className='lg:text-4xl text-2xl font-serif'>{post.title}</div>
-                    <div className='lg:text-2xl text-xl font-serif text-stone-600 text-opacity-80 font-thin'>{post.subtitle}</div>
+                    <div className='lg:text-2xl text-xl font-serif font-thin'>{post.subtitle}</div>
                     <Divider />
                     <article className='prose prose-h4:font-thin prose-h3:font-thin prose-code:font-thin prose-code:text-sm md:prose-xl text-justify'>
                         <Markdown>{post.content}</Markdown>

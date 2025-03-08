@@ -1,9 +1,10 @@
 'use client';
 import { useEffect, useRef, useState } from "react";
 import Link from 'next/link'
+import ThemeToggle from './ThemeToggle';
 
 const NavBar = () => {
-    const divRef = useRef(null);
+    const divRef = useRef<HTMLDivElement>(null);
     const [hideMenu, setHideMenu] = useState(true);
 
     const isListenerAttached = useRef(false);
@@ -13,9 +14,9 @@ const NavBar = () => {
         setHideMenu((prev) => !prev);
     };
 
-    const handleClickOutside = (event) => {
+    const handleClickOutside = (event: MouseEvent) => {
         // Check if click happened outside the div
-        if (divRef.current && !divRef.current.contains(event.target)) {
+        if (divRef.current && !divRef.current.contains(event.target as Node)) {
             setHideMenu(true);
 
             // Remove event listener as required operation is performed
@@ -37,7 +38,8 @@ const NavBar = () => {
     return (
         <div className="flex justify-center">
             <div className="navbar bg-base-100 p-4 font-serif border-b-2 border-b-stone-400 lg:w-2/5">
-                <div className="navbar-start">
+                {/* Left section with hamburger menu and title */}
+                <div className="navbar-start w-1/3">
                     <div className="dropdown" ref={divRef}>
                         <div
                             tabIndex={0}
@@ -62,18 +64,22 @@ const NavBar = () => {
                         >
                             <li onClick={toggleHideMenu}><Link href='/' className='text-lg'>Posts</Link></li>
                             <li onClick={toggleHideMenu}><Link href='/about' className='text-lg'>About</Link></li>
-
-
                         </ul>
                     </div>
                     <div className="text-xl">Mihir Deshpande</div>
                 </div>
-                <div className="navbar-end hidden md:flex">
+                
+                {/* Middle section with navigation links (centered, desktop only) */}
+                <div className="navbar-center w-1/3 hidden md:flex justify-center">
                     <ul className="menu menu-horizontal">
                         <li><Link href='/' className='text-lg'>Posts</Link></li>
-                        <li><Link href='/about' className='text-lg'>
-                            About</Link></li>
+                        <li><Link href='/about' className='text-lg'>About</Link></li>
                     </ul>
+                </div>
+                
+                {/* Right section with theme toggle */}
+                <div className="navbar-end w-1/3 flex justify-end">
+                    <ThemeToggle />
                 </div>
             </div>
         </div>

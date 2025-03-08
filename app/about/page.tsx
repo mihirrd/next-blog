@@ -35,12 +35,7 @@ const page = () => {
               width={600}
             ></Image>
           </div>
-          <div className='text-center mt-4'>
-          <Link href='Resume_Mihir_Deshpande.pdf'
-            target='_blank'
-            rel="noopener noreferrer">
-            <p className='underline'>View Resume</p>
-          </Link>
+          <div className='text-center mt-4'>          
         </div>
         </div>
       </section>

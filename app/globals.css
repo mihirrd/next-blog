@@ -6,3 +6,15 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* Optimize theme transition - only apply to specific properties */
+html[data-theme] {
+  transition-property: color, background-color, border-color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+/* Remove the global transition that might be causing performance issues */
+/* * {
+  transition: background-color 0.3s ease, color 0.3s ease;
+} */
