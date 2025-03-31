@@ -10,7 +10,7 @@ const page = () => {
       <section className="flex justify-center font-serif text-justify">
         <div className="flex flex-col p-10 w-full lg:w-2/5 md:text-lg">
           <p className='mb-4 prose md:prose-xl'>
-            Hey there, my name is Mihir. I am software engineer with 4 years of experience building scalable, high-performance backend systems. I am passionate about designing efficient and fault-tolerant system architectures. I am skilled in integrating LLMs into production environments, with hands-on experience in prompt engineering and GenAI implementation. I enjoy tackling complex problems, drive high-impact solutions, and lead projects that enhance system reliability, performance, and scalability.
+            Hey there, my name is Mihir. I am a software engineer with 4 years of experience building scalable, high-performance backend systems. I am passionate about designing efficient and fault-tolerant system architectures. I am skilled in integrating LLMs into production environments, with hands-on experience in prompt engineering and GenAI implementation. I enjoy tackling complex problems, drive high-impact solutions, and lead projects that enhance system reliability, performance, and scalability.
             I love exploring tech and <a href='https://www.paulgraham.com/hp.html' target="blank" className=''>hacking</a> together cool projects.
             <br/>
             <br/>
