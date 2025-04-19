@@ -58,5 +58,5 @@ With that in mind, here are some best practices I’ve learned that help make wo
 
 
 Over the past couple of years, one important thing I have learned is that building software products that users love has a lot more dimensions than a software developer might think. 
-We often focus on solving technical problems, but building a good product also means thinking about the people who will use it. You have to consider things like design, usability, international users, accessibility, and edge cases that might seem unimportant during development. Timezones are one of those tricky areas that seem small but can cause a lot of frustration if handled poorly.
+We often focus on solving technical problems, but building a good product also means thinking about the people who will use it. You have to consider things like design, usability, international users, accessibility, and edge cases that might seem unimportant during development. Handling timezones is one of those tricky areas that seem small but can cause a lot of frustration if handled poorly.
 The realization and a deep understanding of these dimensions perhaps sets apart a good _Product Engineer_ from just a Software Engineer.
