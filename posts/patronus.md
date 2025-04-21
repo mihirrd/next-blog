@@ -12,5 +12,5 @@ _That which does not make a man worse than he was, also does not make his life w
 In the midst of the bleak forbidden forest — when you're surrounded by Dementors disguised as immorality and temptation — This idea has the power to conjure the glowing silver stag. Patronus is no ordinary charm. It is born out of something pure, unwavering and deeply personal, but above all, the sheer desperation to summon it. The intense willpower to stand against the opposing forces, unmoved. Patronus is one of the most advanced charms out there. In the forest will you realise why. 
 
 <p align="center">
-<img src="/images/harry_potter.png" alt="" width="500"/>
+<img src="/images/patronus.png" alt="" width="500"/>
 </p>
