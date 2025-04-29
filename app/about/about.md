@@ -7,7 +7,7 @@ Hey there, my name is Mihir. I am a software engineer with 4 years of experience
 --- 
 
 ### Work Experience
-At Helpshift, I’ve led initiatives that include:
+At [Helpshift](https://www.helpshift.com/), I’ve led initiatives that include:
 - Designing a high-throughput architecture for LLM integration, supporting 1.5K RPS
 - Engineering a Kafka-based asynchronous task queue that cut load average by 30%
 - Building multilingual AI-powered translation systems that increased user engagement by 20%
@@ -19,7 +19,7 @@ At Helpshift, I’ve led initiatives that include:
 My open-source work in graph embeddings (clj-deepwalk) has been featured in Clojure Deref, and I continue to experiment with tools at the intersection of AI and systems.
 
 #### [Clj-deepwalk](https://github.com/mihirrd/clj-deepwalk)
-- Graph Embedding library written Clojure.
+- Graph Embedding library written in Clojure.
 - Implements [Deepwalk](https://arxiv.org/abs/1403.6652) for learning graph node embeddings
 - Enables vector-based reasoning and similarity search over graph structures
 - Lightweight, modular, and easy to extend for research or production use
@@ -51,8 +51,10 @@ Let’s connect if you're hiring for backend or platform roles — or if you're 
 </p>
 <br>
 
-On a sidenote, I am also a Sitar Player and a student of Indian Classical Music. You can find my music on Youtube, Spotify and on Instagram!
+On a sidenote, I am also a Sitar Player and a student of Indian Classical Music. I have been teaching sitar since 2024 both - online and in person.
 
 <p align="center">
 <img src="/images/concert.png" style="border-radius: 12px;" alt="" width="600"/>
 </p>
+
+You can find my music on Youtube, Spotify and on Instagram!
