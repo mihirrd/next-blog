@@ -24,10 +24,11 @@ function getPostContent(slug) {
 }
 
 // This function generates dynamic metadata for each post
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+    const params = await props.params;
     // You can fetch your post data here
     const post = await getPostContent(params.slug) // Replace with your data fetching function
-    
+
     return {
       title: `${post.title}`,
       description: post.peek,
@@ -38,7 +39,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
         authors: ['Mihir Deshpande']
       }
     }
-  }
+}
 
 
 export const generateStaticParams = async () => {
@@ -49,8 +50,8 @@ export const generateStaticParams = async () => {
 };
 
 
-const page = (props: any) => {
-    const post = getPostContent(props.params.slug)
+const page = async (props: any) => {
+    const post = getPostContent((await props.params).slug)
     const date = new Date(post.date)
     const dateTimeFormatter = new Intl.DateTimeFormat("en-US", { dateStyle: 'long' });
     const formatDate = dateTimeFormatter.format(date);
