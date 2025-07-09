@@ -19,7 +19,7 @@ At [Helpshift](https://www.helpshift.com/), I’ve led initiatives that include:
 
 
 ### [Pensieve](https://github.com/mihirrd/pensieve)
-Pensieve is a durable, in-memory key–value store written in Rust. It uses an LRU (Least Recently Used) cache for eviction and exposes a HTTP REST API via the Axum. The name Pensieve comes from one of the most fascinating magical objects in the [Wizarding World](https://www.harrypotter.com/writing-by-jk-rowling/pensieve).
+Pensieve is a durable, in-memory key–value store written in Rust. It uses an LRU cache for eviction.
 
 - HTTP REST APIs
 - Write-ahead logs for durability
