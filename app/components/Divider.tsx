@@ -1,11 +1,7 @@
 import React from 'react'
 
 const Divider = () => {
-    return (
-        <div className="flex w-full flex-col">
-            <div className="divider"></div>
-        </div>
-    )
+  return <hr className="my-8 border-stone-200 dark:border-stone-800" />
 }
 
 export default Divider

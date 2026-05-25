@@ -1,23 +1,21 @@
 import React from 'react'
 import Link from 'next/link'
 
-const TitleCard = ({ date, title, slug, peek}) => {
-    const publishDate = new Date(date)
-    const dateTimeFormatter = new Intl.DateTimeFormat("en-US", { dateStyle: 'long' });
-    const formatDate = dateTimeFormatter.format(publishDate);
-    return (
-        <div className="card w-full mt-4 bg-base-100 shadow-xl">
-            <figure>
-            </figure>
-            <Link href={`../posts/${slug}`}>
-                <div className="card-body">
-                    <p className='font-thin text-sm'>{formatDate}</p>
-                    <h2 className="md:text-2xl text-xl">{title}</h2>
-                    <p className='font-thin text-sm'>{peek}</p>
-                </div>
-            </Link>
-        </div>
-    )
+const TitleCard = ({ date, title, slug, peek, readingTime }) => {
+  const formatDate = new Intl.DateTimeFormat("en-US", { dateStyle: 'long' }).format(new Date(date));
+  return (
+    <Link href={`/posts/${slug}`} className="block py-8 border-b border-stone-200 dark:border-stone-800 group">
+      <div className="flex items-center gap-3 mb-2">
+        <time className="font-sans text-sm text-stone-500 dark:text-stone-400">{formatDate}</time>
+        <span className="text-stone-300 dark:text-stone-700" aria-hidden>·</span>
+        <span className="font-sans text-sm text-stone-500 dark:text-stone-400">{readingTime} min read</span>
+      </div>
+      <h2 className="font-serif text-xl font-medium text-stone-900 dark:text-stone-100 group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors leading-snug mb-2">
+        {title}
+      </h2>
+      <p className="font-sans text-sm text-stone-600 dark:text-stone-400 leading-relaxed line-clamp-2">{peek}</p>
+    </Link>
+  )
 }
 
 export default TitleCard

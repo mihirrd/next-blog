@@ -6,3 +6,18 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* Inline code — styled separately from fenced blocks */
+.prose :not(pre) > code {
+  background-color: #e7e5e0;
+  color: #44403c;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.85em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.dark .prose :not(pre) > code {
+  background-color: #292524;
+  color: #d6d3d1;
+}

@@ -11,12 +11,15 @@ export default function getPostMetadata(folderName) {
     const posts = markdownPosts.map((filename) => {
         const fileContents = fs.readFileSync(`${folder}/${filename}`, 'utf8')
         const matterResult = matter(fileContents)
+        const wordCount = matterResult.content.trim().split(/\s+/).length
+        const readingTime = Math.ceil(wordCount / 200)
         return {
             title: matterResult.data.title,
             subtitle: matterResult.data.subtitle,
             date: matterResult.data.date,
             slug: filename.replace('.md', ''),
-            peek: matterResult.data.peek
+            peek: matterResult.data.peek,
+            readingTime,
         }
     })
 

@@ -1,13 +1,23 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Lora, DM_Sans } from 'next/font/google'
 import NavBar from './components/NavBar'
 import Footer from './components/Footer'
-
+import BackToTop from './components/BackToTop'
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from "@vercel/analytics/react"
 
-const inter = Inter({ subsets: ['latin'] })
+const lora = Lora({
+  subsets: ['latin'],
+  variable: '--font-lora',
+  display: 'swap',
+})
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  variable: '--font-dm-sans',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: {
@@ -23,14 +33,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" data-theme="retro">
-      <body className={inter.className}>
-        <NavBar />        
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${lora.variable} ${dmSans.variable} font-sans bg-stone-50 text-stone-900 dark:bg-stone-950 dark:text-stone-100 min-h-screen`}>
+        <NavBar />
         {children}
         <Analytics />
         <SpeedInsights />
-        <div className='mb-32'></div>
         <Footer />
+        <BackToTop />
       </body>
     </html>
   )

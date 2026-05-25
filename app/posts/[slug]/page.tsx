@@ -1,9 +1,9 @@
 import React from 'react'
-import Markdown from "markdown-to-jsx"
 import fs from 'fs'
 import matter from "gray-matter"
 import path from 'path'
 import Divider from '@/app/components/Divider'
+import MarkdownContent from '@/app/components/MarkdownContent'
 import getPostMetadata from '@/app/utils/getPostMetadata'
 import Link from 'next/link'
 import { Metadata } from 'next'
@@ -13,13 +13,16 @@ function getPostContent(slug) {
     const file = folder + `${slug}.md`
     const content = fs.readFileSync(file, 'utf8')
     const matterResult = matter(content)
+    const wordCount = matterResult.content.trim().split(/\s+/).length
+    const readingTime = Math.ceil(wordCount / 200)
     return {
         title: matterResult.data.title,
         subtitle: matterResult.data.subtitle,
         date: matterResult.data.date,
         slug: slug,
         content: matterResult.content,
-        peek: matterResult.data.peek
+        peek: matterResult.data.peek,
+        readingTime,
     }
 }
 
@@ -52,27 +55,29 @@ export const generateStaticParams = async () => {
 
 const page = async (props: any) => {
     const post = getPostContent((await props.params).slug)
-    const date = new Date(post.date)
-    const dateTimeFormatter = new Intl.DateTimeFormat("en-US", { dateStyle: 'long' });
-    const formatDate = dateTimeFormatter.format(date);
+    const formatDate = new Intl.DateTimeFormat("en-US", { dateStyle: 'long' }).format(new Date(post.date));
     return (
-        <div className="flex justify-center font-serif">
-            <div className="flex flex-col p-10 w-full lg:w-2/5">
-                <Link href='/' className='mb-5'>
-                    /Posts
+        <div className="flex justify-center px-4 py-12">
+            <div className="w-full max-w-2xl">
+                <Link href="/" className="font-sans text-sm text-stone-500 dark:text-stone-400 hover:text-amber-700 dark:hover:text-amber-400 transition-colors inline-block mb-8">
+                    ← All posts
                 </Link>
-                <div className='text-sm font-serif mb-2 flex gap-2'>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-calendar3" viewBox="0 0 16 16">
-                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z" />
-                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
-                    </svg>
-                    {formatDate}
+                <div className="flex items-center gap-3 mt-6 mb-4">
+                    <time className="font-sans text-sm text-stone-500 dark:text-stone-400">{formatDate}</time>
+                    <span className="text-stone-300 dark:text-stone-700" aria-hidden>·</span>
+                    <span className="font-sans text-sm text-stone-500 dark:text-stone-400">{post.readingTime} min read</span>
                 </div>
-                <div className='lg:text-4xl text-2xl font-serif'>{post.title}</div>
-                <div className='lg:text-2xl text-xl font-serif text-stone-600 text-opacity-80 font-thin'>{post.subtitle}</div>
+                <h1 className="font-serif text-3xl lg:text-4xl font-medium text-stone-900 dark:text-stone-100 leading-tight mb-3">
+                    {post.title}
+                </h1>
+                {post.subtitle && (
+                    <p className="font-serif text-xl text-stone-600 dark:text-stone-400 font-light leading-snug mb-8">
+                        {post.subtitle}
+                    </p>
+                )}
                 <Divider />
-                <article className='prose prose-h4:font-thin prose-h3:font-thin prose-code:font-thin prose-code:text-sm md:prose-xl'>
-                    <Markdown>{post.content}</Markdown>
+                <article className="prose prose-stone dark:prose-invert prose-h2:font-medium prose-h3:font-normal prose-h4:font-normal prose-code:font-normal prose-code:text-sm prose-code:before:content-none prose-code:after:content-none md:prose-lg max-w-none font-serif">
+                    <MarkdownContent>{post.content}</MarkdownContent>
                 </article>
             </div>
         </div>

@@ -16,18 +16,16 @@ function getAboutContent(slug) {
 }
 
 const page = () => {
-  const { title, content } = getAboutContent('about')
+  const { content } = getAboutContent('about')
 
   return (
-    <main>
-      <section className="flex justify-center font-serif text-justify">
-        <div className="flex flex-col p-10 w-full lg:w-2/5 md:text-lg">
-            <article className='prose prose-h4:font-thin prose-h3:font-thin prose-h2:font-thin prose-code:font-thin prose-code:text-sm md:prose-xl text-justify'>
-                <h3>Hey there!</h3>
-        <Markdown>{content}</Markdown>
+    <main className="flex justify-center px-4 py-12">
+      <div className="w-full max-w-2xl">
+        <article className="prose prose-stone dark:prose-invert prose-h4:font-normal prose-h3:font-normal prose-h2:font-normal prose-code:font-normal prose-code:text-sm md:prose-lg max-w-none font-serif">
+          <h3>Hey there!</h3>
+          <Markdown>{content}</Markdown>
         </article>
-        </div>
-      </section>
+      </div>
     </main>
   )
 }
