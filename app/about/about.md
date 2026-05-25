@@ -2,17 +2,18 @@
 title: 'About me'
 ---
 
-My name is Mihir. I am a Software Engineer passionate about Backend Systems. I love exploring tech and [hacking](https://www.paulgraham.com/hp.html) together cool projects. I love Emacs!
-
-
-📧 Email -
-- deshpande.mihir7@gmail.com
-- deshpa92@purdue.edu
-
-On a sidenote, I am also a Sitar Player and a student of Indian Classical Music. I have been teaching sitar since 2024 both - online and in person.
+My name is Mihir. I am a Software Engineer. I love talking and writing about programming, software development, and database systems. I read things, build stuff, and yap about it in this blog. 
 
 <p align="center">
-<img src="/images/concert.png" style="border-radius: 12px;" alt="" width="600"/>
+<img src="/images/profile.jpeg" style="border-radius: 12px;" alt="" width="700"/>
+</p>
+
+On a sidenote, I am also a Sitar Player. I primarily perform (and teach) Indian Classical Music. 
+
+<p align="center">
+<img src="/images/sitar.jpeg" style="border-radius: 12px;" alt="" width="700"/>
 </p>
 
 You can find my music on Youtube, Spotify and on Instagram!
+
+Email: deshpande.mihir7@gmail.com
