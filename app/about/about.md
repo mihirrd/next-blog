@@ -2,7 +2,7 @@
 title: 'About me'
 ---
 
-My name is Mihir. I am a Software Engineer. I love talking and writing about programming, software development, and database systems. I read things, build stuff, and yap about it in this blog. 
+My name is Mihir. I am a Software Engineer. I love talking and writing about programming, software development, and database systems. In this blog, I yap about things I'm reading and projects I'm hacking together.
 
 <p align="center">
 <img src="/images/profile.jpeg" style="border-radius: 12px;" alt="" width="700"/>
