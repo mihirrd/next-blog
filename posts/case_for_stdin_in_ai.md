@@ -1,0 +1,16 @@
+---
+title: 'A Case for STDIN in Agentic Pipelines'
+subtitle: "Why Your LLM CLI Should Read Prompts from Stdin"
+date: '2026-05-29'
+peek: 'While looking through a few CLI-based AI projects recently, I noticed that a lot of them passed the entire prompt as a command-line argument...'
+---
+
+While looking through a few CLI-based AI projects recently, I noticed that a lot of them passed the entire prompt as a command-line argument. At first glance, this seems perfectly reasonable. The prompt is just a string, after all, and passing strings as arguments is something we do all the time. However, this is true only as long as the prompt is small, bounded, and controlled by the developer. The moment an application grows beyond a simple wrapper around an LLM, this design begins to break down.
+
+Consider for example, a code review agent operating inside an orchestration workflow. The review agent rarely receives just a user prompt. Before it is invoked, other components may have collected the Git diff, fetched neighboring files for context, gathered linter warnings, attached failing test output, included repository guidelines, and perhaps even appended comments from previous review cycles. When unbounded prompts are passed as command-line arguments, you are exposing yourself to the infamous Linux kernel's `ARG_MAX` limit. During process creation, the operating system must copy all command-line arguments and environment variables into the new process. To prevent abuse and excessive resource consumption, Linux imposes a limit on their combined size. On many modern systems this is roughly 2 MB, though the exact value varies by platform and configuration. A sufficiently large review context can exceed this limit and cause process creation to fail. The failure mode is nasty because it might appear only after the system has grown in complexity and scale.
+
+The deeper issue, however, is not the limit but a violation of a Unix abstraction. Command-line arguments are intended to communicate instructions. They answer questions like Which model should I use? What output format should I produce? Which review mode is enabled? What severity threshold should I apply? They describe *how a program should behave*. The actual data being processed belongs elsewhere.
+
+That elsewhere is *standard input* or STDIN. STDIN was designed precisely for moving arbitrarily large streams of data between processes. A code review agent that receives its context through stdin can process a ten-line patch and a hundred-thousand-line patch through the same interface. It does not care whether the data originated from Git, another agent, a file, or a network request. The workflow remains composable, scalable, and faithful to the Unix philosophy.
+
+In hindsight, I feel this is less about AI and more about _interface design_. Prompts feel novel because the technology is new, but from an operating system's perspective they're just bytes flowing between programs. As agentic systems become more sophisticated, the temptation is to invent new conventions for moving this data around. Yet the Unix model remains remarkably hard to improve upon. Use arguments to describe behavior and streams to carry payloads. A prompt is not configuration. It is input. And input belongs on STDIN.
