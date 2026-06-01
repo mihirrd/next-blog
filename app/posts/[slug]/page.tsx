@@ -59,24 +59,24 @@ const page = async (props: any) => {
     return (
         <div className="flex justify-center px-4 py-12">
             <div className="w-full max-w-2xl">
-                <Link href="/" className="font-sans text-sm text-stone-500 dark:text-stone-400 hover:text-amber-700 dark:hover:text-amber-400 transition-colors inline-block mb-8">
+                <Link href="/" className="text-sm text-stone-500 dark:text-stone-400 hover:text-amber-700 dark:hover:text-amber-400 transition-colors inline-block mb-8">
                     ← All posts
                 </Link>
                 <div className="flex items-center gap-3 mt-6 mb-4">
-                    <time className="font-sans text-sm text-stone-500 dark:text-stone-400">{formatDate}</time>
+                    <time className="text-sm text-stone-500 dark:text-stone-400">{formatDate}</time>
                     <span className="text-stone-300 dark:text-stone-700" aria-hidden>·</span>
-                    <span className="font-sans text-sm text-stone-500 dark:text-stone-400">{post.readingTime} min read</span>
+                    <span className="text-sm text-stone-500 dark:text-stone-400">{post.readingTime} min read</span>
                 </div>
                 <h1 className="font-serif text-3xl lg:text-4xl font-medium text-stone-900 dark:text-stone-100 leading-tight mb-3">
                     {post.title}
                 </h1>
                 {post.subtitle && (
-                    <p className="font-serif text-xl text-stone-600 dark:text-stone-400 font-light leading-snug mb-8">
+                    <p className="font-serif text-2xl text-stone-600 dark:text-stone-400 font-light leading-snug mb-8">
                         {post.subtitle}
                     </p>
                 )}
                 <Divider />
-                <article className="prose prose-stone dark:prose-invert prose-h2:font-medium prose-h3:font-normal prose-h4:font-normal prose-code:font-normal prose-code:text-sm prose-code:before:content-none prose-code:after:content-none md:prose-lg max-w-none font-serif">
+                <article className="prose prose-stone dark:prose-invert prose-h2:font-medium prose-h3:font-normal prose-h4:font-normal prose-code:font-normal prose-code:text-sm prose-code:before:content-none prose-code:after:content-none prose-lg md:prose-xl max-w-none font-serif">
                     <MarkdownContent>{post.content}</MarkdownContent>
                 </article>
             </div>

@@ -21,7 +21,7 @@ const page = () => {
   return (
     <main className="flex justify-center px-4 py-12">
       <div className="w-full max-w-2xl">
-        <article className="prose prose-stone dark:prose-invert prose-h4:font-normal prose-h3:font-normal prose-h2:font-normal prose-code:font-normal prose-code:text-sm md:prose-lg max-w-none font-serif">
+        <article className="prose prose-stone dark:prose-invert prose-h4:font-normal prose-h3:font-normal prose-h2:font-normal prose-code:font-normal prose-code:text-sm prose-lg md:prose-xl max-w-none font-serif">
           <h3>Hey there!</h3>
           <Markdown>{content}</Markdown>
         </article>
