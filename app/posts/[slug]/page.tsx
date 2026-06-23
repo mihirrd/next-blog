@@ -5,6 +5,7 @@ import path from 'path'
 import Divider from '@/app/components/Divider'
 import MarkdownContent from '@/app/components/MarkdownContent'
 import getPostMetadata from '@/app/utils/getPostMetadata'
+import renderMath from '@/app/utils/renderMath'
 import Link from 'next/link'
 import { Metadata } from 'next'
 
@@ -20,7 +21,7 @@ function getPostContent(slug) {
         subtitle: matterResult.data.subtitle,
         date: matterResult.data.date,
         slug: slug,
-        content: matterResult.content,
+        content: renderMath(matterResult.content),
         peek: matterResult.data.peek,
         readingTime,
     }
